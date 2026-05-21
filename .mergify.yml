@@ -1,0 +1,17 @@
+pull_request_rules:
+  - name: Auto-merge Dependabot updates after required checks pass
+    conditions:
+      - author=dependabot[bot]
+      - base=main
+      - check-success=Lint and test
+      - check-success=Build Checks
+      - check-success=Dependency review
+    actions:
+      merge:
+        method: squash
+
+  - name: Delete merged PR branches
+    conditions:
+      - merged
+    actions:
+      delete_head_branch: {}

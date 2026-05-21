@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "ru-RU"
+early_access: false
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  collapse_walkthrough: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!uv.lock"
+    - "!configs/grafana/node-exporter.json"
+    - "!admin/static/**"
+    - "!images/**"
+  path_instructions:
+    - path: "bot/**"
+      instructions: >
+        Focus on runtime bugs, aiogram callback behavior, payment/order correctness,
+        security-sensitive data handling, and missing tests.
+    - path: ".github/**"
+      instructions: >
+        Check workflow permissions, secret exposure risk, dependency bot behavior,
+        and whether jobs can run from a clean checkout.
+
+chat:
+  auto_reply: true

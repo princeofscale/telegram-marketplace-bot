@@ -131,3 +131,5 @@ Section images live in `images/`:
 - Commit `.env.example`; it documents configuration shape with placeholders.
 - Generated caches, bytecode, local backups, and virtual environments are ignored.
 - CI runs Ruff and pytest on Python 3.13.
+- Repository automation is configured for Dependabot, ImgBot, CodeRabbit, Mergify, Release Drafter, and OpenSSF Scorecard.
+  GitHub Apps still need to be installed in the repository settings for ImgBot, CodeRabbit, and Mergify.

@@ -1,0 +1,11 @@
+{
+  "schedule": "weekly",
+  "aggressiveCompression": false,
+  "compressWiki": false,
+  "minKBReduced": 50,
+  "prTitle": "Optimize images",
+  "prBody": "ImgBot optimized repository images.\n\n{optimization_ratio}\n\n{optimization_details}",
+  "ignoredFiles": [
+    "admin/static/fonts/*"
+  ]
+}
