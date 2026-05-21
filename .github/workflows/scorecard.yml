@@ -46,6 +46,7 @@ jobs:
           from pathlib import Path
 
           sarif_path = Path("scorecard-results.sarif")
+          filtered_path = Path("scorecard-results.filtered.sarif")
           sarif = json.loads(sarif_path.read_text())
           keep_rule_ids = {
               "Binary-ArtifactsID",
@@ -81,10 +82,10 @@ jobs:
                   kept_results.append(result)
               run["results"] = kept_results
 
-          sarif_path.write_text(json.dumps(sarif, indent=2) + "\n")
+          filtered_path.write_text(json.dumps(sarif, indent=2) + "\n")
           PY
 
       - name: Upload Scorecard SARIF
         uses: github/codeql-action/upload-sarif@9e0d7b8d25671d64c341c19c0152d693099fb5ba # v4
         with:
-          sarif_file: scorecard-results.sarif
+          sarif_file: scorecard-results.filtered.sarif
