@@ -5,16 +5,63 @@ updates:
     directory: "/"
     labels:
       - dependencies
+      - python
     schedule:
       interval: "daily"
       time: "02:00"
+      timezone: "Europe/Saratov"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      python-runtime:
+        dependency-type: "production"
+      python-development:
+        dependency-type: "development"
     open-pull-requests-limit: 10
 
   - package-ecosystem: "github-actions"
     directory: "/"
     labels:
       - dependencies
+      - github-actions
     schedule:
       interval: "daily"
-      time: "02:00"
+      time: "02:15"
+      timezone: "Europe/Saratov"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    labels:
+      - dependencies
+      - docker
+    schedule:
+      interval: "daily"
+      time: "02:30"
+      timezone: "Europe/Saratov"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "docker"
+    directory: "/admin"
+    labels:
+      - dependencies
+      - docker
+    schedule:
+      interval: "daily"
+      time: "02:45"
+      timezone: "Europe/Saratov"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
     open-pull-requests-limit: 10
