@@ -3,9 +3,6 @@ version: 2
 updates:
   - package-ecosystem: "uv"
     directory: "/"
-    labels:
-      - dependencies
-      - python
     schedule:
       interval: "daily"
       time: "02:00"
@@ -22,9 +19,6 @@ updates:
 
   - package-ecosystem: "github-actions"
     directory: "/"
-    labels:
-      - dependencies
-      - github-actions
     schedule:
       interval: "daily"
       time: "02:15"
@@ -40,9 +34,6 @@ updates:
 
   - package-ecosystem: "docker"
     directory: "/"
-    labels:
-      - dependencies
-      - docker
     schedule:
       interval: "daily"
       time: "02:30"
@@ -54,9 +45,6 @@ updates:
 
   - package-ecosystem: "docker"
     directory: "/admin"
-    labels:
-      - dependencies
-      - docker
     schedule:
       interval: "daily"
       time: "02:45"

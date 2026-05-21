@@ -31,5 +31,8 @@ jobs:
       - name: Check using Ruff formatter
         run: uv run ruff format --check bot tests admin
 
+      - name: Compile locales
+        run: uv run pybabel compile -d bot/locales
+
       - name: Run tests
         run: uv run pytest
