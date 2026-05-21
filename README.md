@@ -1,6 +1,9 @@
 # Telegram Marketplace Bot
 
-[![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/princeofscale/telegram-marketplace-bot?utm_source=oss&utm_medium=github&utm_campaign=princeofscale%2Ftelegram-marketplace-bot&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)](https://coderabbit.ai)
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/princeofscale/telegram-marketplace-bot?utm_source=oss&utm_medium=github&utm_campaign=princeofscale%2Ftelegram-marketplace-bot&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+[![Linting](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/linters.yml/badge.svg)](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/linters.yml)
+[![CodeQL](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/codeql.yml/badge.svg)](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/scorecard.yml/badge.svg)](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/scorecard.yml)
 
 Telegram bot for selling digital goods with a balance wallet, order delivery, admin tools, provider inventory sync, and Docker-based deployment.
 
@@ -127,11 +130,18 @@ Section images live in `images/`:
 - `catalog.png`, `info.png`, `settings.png` for matching sections.
 - `other.png` as fallback for sections without a dedicated image.
 
+## Security
+
+Security policy and vulnerability reporting instructions are documented in
+[`SECURITY.md`](SECURITY.md). Do not open public GitHub issues for security
+problems; use GitHub Security Advisories instead.
+
 ## Repository Notes
 
 - Do not commit `.env`; it contains real secrets.
 - Commit `.env.example`; it documents configuration shape with placeholders.
 - Generated caches, bytecode, local backups, and virtual environments are ignored.
 - CI runs Ruff and pytest on Python 3.13.
+- CodeQL and OpenSSF Scorecard upload security results to GitHub Code Scanning.
 - Repository automation is configured for Dependabot, ImgBot, CodeRabbit, Mergify, Release Drafter, and OpenSSF Scorecard.
   GitHub Apps still need to be installed in the repository settings for ImgBot, CodeRabbit, and Mergify.
