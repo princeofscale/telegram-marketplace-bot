@@ -5,19 +5,21 @@
 [![CodeQL](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/codeql.yml/badge.svg)](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/codeql.yml)
 [![OpenSSF Scorecard](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/scorecard.yml/badge.svg)](https://github.com/princeofscale/telegram-marketplace-bot/actions/workflows/scorecard.yml)
 
-Telegram bot for selling digital goods with a balance wallet, order delivery, admin tools, provider inventory sync, and Docker-based deployment.
+Русская версия по умолчанию. English version: [README_EN.md](README_EN.md).
 
-## Features
+Telegram-бот для продажи цифровых товаров: виртуальная валюта, аккаунты, Telegram Stars и другие позиции каталога. В проекте есть баланс пользователя, подтверждение покупки, выдача товара, админ-панель, интеграции с провайдерами и Docker-развертывание.
 
-- Telegram storefront with catalog, profile, purchases, settings, info, and support sections.
-- Balance top-ups through Platega and LOLZ Balance transfer links.
-- LOLZ/LZT Market integration through the official `LOLZTEAM` Python package.
-- Purchase confirmation before charging user balance.
-- Encrypted inventory delivery snapshots.
-- Admin panel, user export, metrics, PostgreSQL backups, Prometheus, and Grafana.
-- Localization for Russian, English, and Ukrainian.
+## Возможности
 
-## Stack
+- Главное меню Telegram-бота с каталогом, профилем, покупками, настройками, информацией и поддержкой.
+- Пополнение баланса через Platega и ссылки перевода LOLZ Balance.
+- Интеграция LOLZ/LZT Market через официальный пакет `LOLZTEAM`.
+- Подтверждение перед покупкой, чтобы пользователь явно видел сумму и товар.
+- Зашифрованные снимки выдачи инвентаря.
+- Админ-панель, экспорт пользователей, метрики, PostgreSQL backups, Prometheus и Grafana.
+- Локализация на русском, английском и украинском языках.
+
+## Стек
 
 - Python 3.12+
 - aiogram 3
@@ -27,13 +29,15 @@ Telegram bot for selling digital goods with a balance wallet, order delivery, ad
 - uv
 - Docker Compose
 
-## Quick Start
+## Быстрый старт
+
+Создай локальный `.env`:
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` and set at minimum:
+Минимально заполни:
 
 ```env
 BOT_TOKEN="telegram-bot-token"
@@ -43,56 +47,58 @@ SECRET_KEY="strong-admin-secret"
 SECURITY_PASSWORD_SALT="strong-admin-salt"
 ```
 
-Run the stack:
+Запусти сервисы:
 
 ```bash
 docker compose up -d --build
 ```
 
-View logs:
+Посмотреть логи бота:
 
 ```bash
 docker compose logs -f bot
 ```
 
-Run migrations manually when needed:
+Применить миграции вручную:
 
 ```bash
 docker compose run --rm migrator alembic upgrade head
 ```
 
-## Local Development
+## Разработка
 
-Install dependencies:
+Установка зависимостей:
 
 ```bash
 uv sync --all-groups --dev
 ```
 
-Run checks:
+Проверки:
 
 ```bash
+uv run pre-commit run --all-files
 uv run ruff check bot tests admin
 uv run ruff format --check bot tests admin
+uv run pybabel compile -d bot/locales
 uv run pytest
 ```
 
-Compile translations after editing `.po` files:
+После изменения `.po` файлов компилируй переводы:
 
 ```bash
 uv run pybabel compile -d bot/locales
 ```
 
-## LOLZ / LZT Setup
+## LOLZ / LZT
 
-The bot uses `LOLZTEAM` for market inventory and LOLZ Balance payment verification.
+Бот использует `LOLZTEAM` для синхронизации маркет-инвентаря и проверки пополнений через LOLZ Balance.
 
-Create a token at:
+Токен можно получить здесь:
 
 - https://lzt.market/account/api
 - https://lolz.live/account/api
 
-Set:
+Переменные:
 
 ```env
 LOLZ_MARKET_ACCESS_TOKEN="token"
@@ -103,15 +109,15 @@ LOLZ_BALANCE_USERNAME="princeofscale"
 LOLZ_BALANCE_CURRENCY="rub"
 ```
 
-Sync market items:
+Синхронизация товаров:
 
 ```bash
 docker compose exec bot python -m bot.scripts.sync_lolz_market
 ```
 
-## Platega Setup
+## Platega
 
-Set these only if Platega payments should be enabled:
+Заполняй только если нужен прием платежей через Platega:
 
 ```env
 PLATEGA_MERCHANT_ID="merchant-id"
@@ -120,28 +126,24 @@ PLATEGA_BASE_URL="https://app.platega.io"
 PLATEGA_CALLBACK_PATH="/payments/platega/callback"
 ```
 
-## Images
+## Изображения
 
-Section images live in `images/`:
+Картинки разделов лежат в `images/`:
 
-- `menu.jpg` or `menu.png` for the main menu.
-- `help.png` for support/help.
-- `profile.png` for profile and wallet screens.
-- `catalog.png`, `info.png`, `settings.png` for matching sections.
-- `other.png` as fallback for sections without a dedicated image.
+- `menu.jpg` или `menu.png` для главного меню.
+- `help.png` для помощи/поддержки.
+- `profile.png` для профиля и баланса.
+- `catalog.png`, `info.png`, `settings.png` для соответствующих разделов.
+- `other.png` как fallback для остальных экранов.
 
-## Security
+## Безопасность
 
-Security policy and vulnerability reporting instructions are documented in
-[`SECURITY.md`](SECURITY.md). Do not open public GitHub issues for security
-problems; use GitHub Security Advisories instead.
+Политика безопасности и порядок сообщения об уязвимостях описаны в [SECURITY.md](SECURITY.md). Не создавай публичные GitHub issues для уязвимостей; используй GitHub Security Advisories.
 
-## Repository Notes
+## Репозиторий
 
-- Do not commit `.env`; it contains real secrets.
-- Commit `.env.example`; it documents configuration shape with placeholders.
-- Generated caches, bytecode, local backups, and virtual environments are ignored.
-- CI runs Ruff and pytest on Python 3.13.
-- CodeQL and OpenSSF Scorecard upload security results to GitHub Code Scanning.
-- Repository automation is configured for Dependabot, ImgBot, CodeRabbit, Mergify, Release Drafter, and OpenSSF Scorecard.
-  GitHub Apps still need to be installed in the repository settings for ImgBot, CodeRabbit, and Mergify.
+- Не коммить `.env`: там реальные секреты.
+- Коммить `.env.example`: он документирует форму конфигурации.
+- CI запускает Ruff, pytest, Docker build, CodeQL, Hadolint и OpenSSF Scorecard.
+- `main` защищен ruleset-ом: изменения должны проходить через PR и обязательные проверки.
+- Автоматизация настроена для Dependabot, ImgBot, CodeRabbit, Mergify, Release Drafter и OpenSSF Scorecard.

@@ -5,18 +5,25 @@ on:
     branches: ["main", "master"]
   pull_request:
     branches: ["main", "master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: docker-image-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   docker:
     name: Build Checks
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-    - name: Build the Docker image
-      run: |
-        docker build . --file Dockerfile --tag image-bot:$(date +%s)
-        docker build . --file admin/Dockerfile --tag image-admin:$(date +%s)
+      - name: Build bot image
+        run: docker build . --file Dockerfile --tag telegram-marketplace-bot:${{ github.sha }}
+
+      - name: Build admin image
+        run: docker build . --file admin/Dockerfile --tag telegram-marketplace-admin:${{ github.sha }}
