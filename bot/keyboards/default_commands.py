@@ -1,0 +1,39 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
+
+from aiogram.types import BotCommand, BotCommandScopeChat, BotCommandScopeDefault
+
+from bot.core.config import settings
+
+if TYPE_CHECKING:
+    from aiogram import Bot
+
+users_commands: dict[str, dict[str, str]] = {
+    "en": {"start": "menu"},
+    "uk": {"start": "меню"},
+    "ru": {"start": "меню"},
+}
+
+
+async def set_default_commands(bot: Bot) -> None:
+    await remove_default_commands(bot)
+
+    for language_code, commands in users_commands.items():
+        await bot.set_my_commands(
+            [BotCommand(command=command, description=description) for command, description in commands.items()],
+            scope=BotCommandScopeDefault(),
+            language_code=language_code,
+        )
+
+        for admin_id in settings.default_admin_user_ids:
+            await bot.set_my_commands(
+                [BotCommand(command=command, description=description) for command, description in commands.items()],
+                scope=BotCommandScopeChat(chat_id=admin_id),
+                language_code=language_code,
+            )
+
+
+async def remove_default_commands(bot: Bot) -> None:
+    await bot.delete_my_commands(scope=BotCommandScopeDefault())
+    for admin_id in settings.default_admin_user_ids:
+        await bot.delete_my_commands(scope=BotCommandScopeChat(chat_id=admin_id))

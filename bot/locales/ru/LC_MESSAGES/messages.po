@@ -1,0 +1,341 @@
+# Russian translations for messages..
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the messages. project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages. VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-15 12:58+0400\n"
+"PO-Revision-Date: 2024-01-15 12:59+0400\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: bot/handlers/export_users.py:29
+msgid "user counter: <b>{count}</b>"
+msgstr "кол-во пользователей: <b>{count}</b>"
+
+#: bot/handlers/info.py:11
+msgid "about"
+msgstr ""
+"ℹ️ <b>Информация</b>\n"
+"\n"
+"Avoxo — бот для покупки цифровых товаров: виртуальной валюты, аккаунтов, Telegram Stars и других позиций. Ассортимент может меняться: актуальные товары всегда доступны в каталоге."
+
+#: bot/handlers/menu.py:13 bot/handlers/start.py:16
+msgid "title main keyboard"
+msgstr ""
+"✨ <b>Avoxo</b>\n"
+"\n"
+"Выберите раздел: каталог товаров, профиль, покупки или поддержку."
+
+#: bot/handlers/support.py:13
+msgid "support text"
+msgstr "🤝 Поддержка"
+
+#: bot/keyboards/inline/contacts.py:11 bot/keyboards/inline/contacts.py:22
+#: bot/keyboards/inline/menu.py:12
+msgid "support button"
+msgstr "Поддержка"
+
+msgid "captcha prompt"
+msgstr "Подтвердите, что вы человек, чтобы продолжить."
+
+msgid "captcha pass button"
+msgstr "✅ Я человек"
+
+msgid "registration required"
+msgstr "Начните регистрацию командой /start."
+
+msgid "new referral notification"
+msgstr "У вас новый реферал: {first_name} ({user_id})."
+
+#: bot/keyboards/inline/contacts.py:23
+msgid "back button"
+msgstr "🔙 Вернуться назад"
+
+#: bot/keyboards/inline/menu.py:9
+msgid "wallet button"
+msgstr "Профиль"
+
+#: bot/keyboards/inline/menu.py:10
+msgid "premium button"
+msgstr "🆙 Получить PREMIUM"
+
+msgid "catalog button"
+msgstr "Каталог"
+
+msgid "purchases button"
+msgstr "Мои покупки"
+
+msgid "settings button"
+msgstr "Настройки"
+
+msgid "admin panel button"
+msgstr "Админ-панель"
+
+#: bot/keyboards/inline/menu.py:11
+msgid "info button"
+msgstr "Информация"
+
+#: bot/middlewares/auth.py:41
+msgid "first message"
+msgstr ""
+"👋 <b>Добро пожаловать в бот.</b>\n"
+"\n"
+"Чтобы открыть меню, используйте /start"
+
+msgid "catalog title"
+msgstr "Доступные товары"
+
+msgid "catalog empty"
+msgstr "Сейчас нет доступных товаров."
+
+msgid "catalog unavailable"
+msgstr "Каталог недоступен."
+
+msgid "product unavailable"
+msgstr "Этот товар недоступен."
+
+msgid "product details"
+msgstr ""
+"<b>{title}</b>\n"
+"Категория: {category}\n"
+"Цена: {price}"
+
+msgid "buy button"
+msgstr "Купить"
+
+msgid "confirm purchase button"
+msgstr "✅ Подтвердить покупку"
+
+msgid "purchase confirmation"
+msgstr ""
+"🧾 <b>Подтверждение покупки</b>\n"
+"\n"
+"Товар: <b>{title}</b>\n"
+"Категория: {category}\n"
+"К списанию: <b>{price}</b>\n"
+"\n"
+"После подтверждения сумма будет списана с баланса, а товар будет выдан автоматически."
+
+msgid "insufficient funds"
+msgstr "Недостаточно средств."
+
+msgid "purchase completed"
+msgstr ""
+"Покупка завершена.\n"
+"Заказ: {order_id}\n"
+"Цена: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "purchases title"
+msgstr "Ваши покупки"
+
+msgid "purchases empty"
+msgstr "У вас пока нет покупок."
+
+msgid "purchase unavailable"
+msgstr "Покупка недоступна."
+
+msgid "purchase details"
+msgstr ""
+"Заказ: {order_id}\n"
+"Статус: {status}\n"
+"Цена: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "wallet title"
+msgstr ""
+"<b>Профиль</b>\n"
+"ID: <code>{user_id}</code>\n"
+"Имя: {first_name}\n"
+"Username: {username}\n"
+"Язык: {language_code}\n"
+"Роль: {role}\n"
+"\n"
+"Баланс: {balance}\n"
+"Пополнено: {total_deposited}\n"
+"Потрачено: {total_spent}"
+
+msgid "wallet unavailable"
+msgstr "Профиль недоступен."
+
+msgid "empty value"
+msgstr "не указано"
+
+msgid "top up button"
+msgstr "Пополнить"
+
+msgid "deposit history button"
+msgstr "Пополнения"
+
+msgid "top up title"
+msgstr "Выберите сумму пополнения:"
+
+msgid "deposit amount button"
+msgstr "{amount} ₽"
+
+msgid "deposit unavailable"
+msgstr "Пополнение недоступно."
+
+msgid "deposit created"
+msgstr ""
+"Пополнение создано.\n"
+"Сумма: {amount}\n"
+"Метод: {payment_method}\n"
+"ID платежа: {provider_payment_id}"
+
+msgid "choose payment method"
+msgstr "Выберите способ оплаты для пополнения баланса: {amount}"
+
+msgid "manual payment method button"
+msgstr "Ручная проверка"
+
+msgid "pay button"
+msgstr "Оплатить"
+
+msgid "check payment button"
+msgstr "Проверить оплату"
+
+msgid "deposit check unavailable"
+msgstr "Проверка оплаты недоступна."
+
+msgid "deposit status"
+msgstr "Статус платежа: {status}"
+
+msgid "deposit history title"
+msgstr "Ваши пополнения:"
+
+msgid "deposit history empty"
+msgstr "Ваши пополнения:\n\nПополнений пока нет."
+
+msgid "deposit history item button"
+msgstr "{amount} ₽ — {status}"
+
+msgid "deposit details"
+msgstr ""
+"<b>Пополнение</b>\n"
+"Сумма баланса: {amount}\n"
+"К оплате: {requested_amount}\n"
+"Комиссия: {commission_amount}\n"
+"Метод: {payment_method}\n"
+"Статус: {status}\n"
+"ID платежа: <code>{provider_payment_id}</code>\n"
+"Создано: {created_at}"
+
+msgid "deposit status paid"
+msgstr "удачно"
+
+msgid "deposit status failed"
+msgstr "не удачно"
+
+msgid "deposit status pending"
+msgstr "в процессе"
+
+msgid "previous page button"
+msgstr "Назад"
+
+msgid "next page button"
+msgstr "Далее"
+
+msgid "settings title"
+msgstr ""
+"<b>Настройки</b>\n"
+"Текущий язык: {language_code}\n"
+"\n"
+"Выберите, что хотите настроить:"
+
+msgid "language settings title"
+msgstr ""
+"<b>Настройка языка</b>\n"
+"Текущий язык: {language_code}\n"
+"\n"
+"Выберите язык:"
+
+msgid "language settings button"
+msgstr "Язык"
+
+msgid "settings unavailable"
+msgstr "Настройки недоступны."
+
+msgid "language changed"
+msgstr "Язык изменён: {language_code}"
+
+msgid "language ru button"
+msgstr "Русский"
+
+msgid "language en button"
+msgstr "English"
+
+msgid "language uk button"
+msgstr "Українська"
+
+msgid "selected language button"
+msgstr "✓ {language}"
+
+msgid "privacy policy button"
+msgstr "Политика конфиденциальности"
+
+msgid "main menu button"
+msgstr "Главное меню"
+
+msgid "privacy policy"
+msgstr ""
+"<b>Политика конфиденциальности</b>\n"
+"\n"
+"Мы используем данные Telegram-профиля, такие как ID, имя пользователя, язык и username, чтобы создавать профиль, обрабатывать заказы, пополнения и обращения в поддержку.\n"
+"\n"
+"Платёжные данные обрабатываются платёжными провайдерами. Бот хранит только техническую информацию о заказах и платежах, необходимую для работы сервиса.\n"
+"\n"
+"Мы не продаём персональные данные третьим лицам. Данные могут передаваться только сервисам, которые нужны для работы бота, оплаты, аналитики, безопасности и поддержки.\n"
+"\n"
+"Для вопросов по данным обратитесь в поддержку."
+
+msgid "admin panel title"
+msgstr "<b>Админ-панель</b>"
+
+msgid "admin access denied"
+msgstr "Нет доступа к админ-панели."
+
+msgid "admin stats button"
+msgstr "Статистика"
+
+msgid "admin export users button"
+msgstr "Экспорт пользователей"
+
+msgid "admin export started"
+msgstr "Экспорт пользователей готов."
+
+msgid "admin stats text"
+msgstr ""
+"<b>Статистика</b>\n"
+"Пользователи: {users_count}\n"
+"Админы: {admins_count}\n"
+"Пополнения: {deposits_count}\n"
+"Успешные пополнения: {paid_deposits_count}\n"
+"Сумма успешных пополнений: {paid_deposits_amount}\n"
+"Заказы: {orders_count}\n"
+"Товары в каталоге: {catalog_products_count}\n"
+"Единицы инвентаря: {inventory_items_count}"
+
+#~ msgid ""
+#~ "👋 <b>Добро пожаловать в бот.</b>\n"
+#~ "<i>Это сообщение появляет только один раз</i>\n"
+#~ "\n"
+#~ "Чтобы начать пользоваться ботом можете начать с /menu"
+#~ msgstr ""
+#~ "👋 <b>Добро пожаловать в бот.</b>\n"
+#~ "<i>Это сообщение появляется только один раз</i>\n"
+#~ "\n"
+#~ "Чтобы начать пользоваться ботом можете начать с /menu"

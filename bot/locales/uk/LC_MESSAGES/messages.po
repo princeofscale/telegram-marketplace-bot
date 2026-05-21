@@ -1,0 +1,337 @@
+# Ukrainian translations for messages..
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the messages. project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages. VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-15 12:58+0400\n"
+"PO-Revision-Date: 2024-01-14 14:51+0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: uk\n"
+"Language-Team: uk <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: bot/handlers/export_users.py:29
+msgid "user counter: <b>{count}</b>"
+msgstr "кількість користувачів: <b>{count}</b>"
+
+#: bot/handlers/info.py:11
+msgid "about"
+msgstr ""
+"ℹ️ <b>Інформація</b>\n"
+"\n"
+"Avoxo — бот для купівлі цифрових товарів: віртуальної валюти, акаунтів, Telegram Stars та інших позицій. Асортимент може змінюватися: актуальні товари завжди доступні в каталозі."
+
+#: bot/handlers/menu.py:13 bot/handlers/start.py:16
+msgid "title main keyboard"
+msgstr ""
+"✨ <b>Avoxo</b>\n"
+"\n"
+"Оберіть розділ: каталог товарів, профіль, покупки або підтримку."
+
+#: bot/handlers/support.py:13
+msgid "support text"
+msgstr "🤝 Підтримка"
+
+#: bot/keyboards/inline/contacts.py:11 bot/keyboards/inline/contacts.py:22
+#: bot/keyboards/inline/menu.py:12
+msgid "support button"
+msgstr "Підтримка"
+
+msgid "captcha prompt"
+msgstr "Підтвердьте, що ви людина, щоб продовжити."
+
+msgid "captcha pass button"
+msgstr "✅ Я людина"
+
+msgid "registration required"
+msgstr "Почніть реєстрацію командою /start."
+
+msgid "new referral notification"
+msgstr "У вас новий реферал: {first_name} ({user_id})."
+
+#: bot/keyboards/inline/contacts.py:23
+msgid "back button"
+msgstr "Назад"
+
+#: bot/keyboards/inline/menu.py:9
+msgid "wallet button"
+msgstr "Профіль"
+
+#: bot/keyboards/inline/menu.py:10
+msgid "premium button"
+msgstr "Отримати PREMIUM"
+
+msgid "catalog button"
+msgstr "Каталог"
+
+msgid "purchases button"
+msgstr "Мої покупки"
+
+msgid "settings button"
+msgstr "Налаштування"
+
+msgid "admin panel button"
+msgstr "Адмін-панель"
+
+#: bot/keyboards/inline/menu.py:11
+msgid "info button"
+msgstr "Інформація"
+
+#: bot/middlewares/auth.py:41
+msgid "first message"
+msgstr ""
+"👋 <b>Ласкаво просимо в бот.</b>\n"
+"\n"
+"Щоб відкрити меню, використовуйте /start"
+
+msgid "catalog title"
+msgstr "Доступні товари"
+
+msgid "catalog empty"
+msgstr "Зараз немає доступних товарів."
+
+msgid "catalog unavailable"
+msgstr "Каталог недоступний."
+
+msgid "product unavailable"
+msgstr "Цей товар недоступний."
+
+msgid "product details"
+msgstr ""
+"<b>{title}</b>\n"
+"Категорія: {category}\n"
+"Ціна: {price}"
+
+msgid "buy button"
+msgstr "Купити"
+
+msgid "confirm purchase button"
+msgstr "✅ Підтвердити покупку"
+
+msgid "purchase confirmation"
+msgstr ""
+"🧾 <b>Підтвердження покупки</b>\n"
+"\n"
+"Товар: <b>{title}</b>\n"
+"Категорія: {category}\n"
+"До списання: <b>{price}</b>\n"
+"\n"
+"Після підтвердження суму буде списано з балансу, а товар буде видано автоматично."
+
+msgid "insufficient funds"
+msgstr "Недостатньо коштів."
+
+msgid "purchase completed"
+msgstr ""
+"Покупку завершено.\n"
+"Замовлення: {order_id}\n"
+"Ціна: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "purchases title"
+msgstr "Ваші покупки"
+
+msgid "purchases empty"
+msgstr "У вас ще немає покупок."
+
+msgid "purchase unavailable"
+msgstr "Покупка недоступна."
+
+msgid "purchase details"
+msgstr ""
+"Замовлення: {order_id}\n"
+"Статус: {status}\n"
+"Ціна: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "wallet title"
+msgstr ""
+"<b>Профіль</b>\n"
+"ID: <code>{user_id}</code>\n"
+"Ім'я: {first_name}\n"
+"Username: {username}\n"
+"Мова: {language_code}\n"
+"Роль: {role}\n"
+"\n"
+"Баланс: {balance}\n"
+"Поповнено: {total_deposited}\n"
+"Витрачено: {total_spent}"
+
+msgid "wallet unavailable"
+msgstr "Профіль недоступний."
+
+msgid "empty value"
+msgstr "не вказано"
+
+msgid "top up button"
+msgstr "Поповнити"
+
+msgid "deposit history button"
+msgstr "Поповнення"
+
+msgid "top up title"
+msgstr "Оберіть суму поповнення:"
+
+msgid "deposit amount button"
+msgstr "{amount} ₽"
+
+msgid "deposit unavailable"
+msgstr "Поповнення недоступне."
+
+msgid "deposit created"
+msgstr ""
+"Поповнення створено.\n"
+"Сума: {amount}\n"
+"Метод: {payment_method}\n"
+"ID платежу: {provider_payment_id}"
+
+msgid "choose payment method"
+msgstr "Оберіть спосіб оплати для поповнення балансу: {amount}"
+
+msgid "manual payment method button"
+msgstr "Ручна перевірка"
+
+msgid "pay button"
+msgstr "Оплатити"
+
+msgid "check payment button"
+msgstr "Перевірити оплату"
+
+msgid "deposit check unavailable"
+msgstr "Перевірка оплати недоступна."
+
+msgid "deposit status"
+msgstr "Статус платежу: {status}"
+
+msgid "deposit history title"
+msgstr "Ваші поповнення:"
+
+msgid "deposit history empty"
+msgstr "Ваші поповнення:\n\nПоповнень ще немає."
+
+msgid "deposit history item button"
+msgstr "{amount} ₽ — {status}"
+
+msgid "deposit details"
+msgstr ""
+"<b>Поповнення</b>\n"
+"Сума балансу: {amount}\n"
+"До оплати: {requested_amount}\n"
+"Комісія: {commission_amount}\n"
+"Метод: {payment_method}\n"
+"Статус: {status}\n"
+"ID платежу: <code>{provider_payment_id}</code>\n"
+"Створено: {created_at}"
+
+msgid "deposit status paid"
+msgstr "успішно"
+
+msgid "deposit status failed"
+msgstr "не успішно"
+
+msgid "deposit status pending"
+msgstr "в процесі"
+
+msgid "previous page button"
+msgstr "Назад"
+
+msgid "next page button"
+msgstr "Далі"
+
+msgid "settings title"
+msgstr ""
+"<b>Налаштування</b>\n"
+"Поточна мова: {language_code}\n"
+"\n"
+"Оберіть, що хочете налаштувати:"
+
+msgid "language settings title"
+msgstr ""
+"<b>Налаштування мови</b>\n"
+"Поточна мова: {language_code}\n"
+"\n"
+"Оберіть мову:"
+
+msgid "language settings button"
+msgstr "Мова"
+
+msgid "settings unavailable"
+msgstr "Налаштування недоступні."
+
+msgid "language changed"
+msgstr "Мову змінено: {language_code}"
+
+msgid "language ru button"
+msgstr "Русский"
+
+msgid "language en button"
+msgstr "English"
+
+msgid "language uk button"
+msgstr "Українська"
+
+msgid "selected language button"
+msgstr "✓ {language}"
+
+msgid "privacy policy button"
+msgstr "Політика конфіденційності"
+
+msgid "main menu button"
+msgstr "Головне меню"
+
+msgid "privacy policy"
+msgstr ""
+"<b>Політика конфіденційності</b>\n"
+"\n"
+"Ми використовуємо дані Telegram-профілю, такі як ID, ім'я, мова та username, щоб створювати профіль, обробляти замовлення, поповнення та звернення до підтримки.\n"
+"\n"
+"Платіжні дані обробляються платіжними провайдерами. Бот зберігає лише технічну інформацію про замовлення та платежі, необхідну для роботи сервісу.\n"
+"\n"
+"Ми не продаємо персональні дані третім особам. Дані можуть передаватися лише сервісам, потрібним для роботи бота, оплат, аналітики, безпеки та підтримки.\n"
+"\n"
+"З питань щодо даних звертайтеся до підтримки."
+
+msgid "admin panel title"
+msgstr "<b>Адмін-панель</b>"
+
+msgid "admin access denied"
+msgstr "Немає доступу до адмін-панелі."
+
+msgid "admin stats button"
+msgstr "Статистика"
+
+msgid "admin export users button"
+msgstr "Експорт користувачів"
+
+msgid "admin export started"
+msgstr "Експорт користувачів готовий."
+
+msgid "admin stats text"
+msgstr ""
+"<b>Статистика</b>\n"
+"Користувачі: {users_count}\n"
+"Адміни: {admins_count}\n"
+"Поповнення: {deposits_count}\n"
+"Успішні поповнення: {paid_deposits_count}\n"
+"Сума успішних поповнень: {paid_deposits_amount}\n"
+"Замовлення: {orders_count}\n"
+"Товари в каталозі: {catalog_products_count}\n"
+"Одиниці інвентарю: {inventory_items_count}"
+
+#~ msgid ""
+#~ "👋 <b>Добро пожаловать в бот.</b>\n"
+#~ "<i>Это сообщение появляет только один раз</i>\n"
+#~ "\n"
+#~ "Чтобы начать пользоваться ботом можете начать с /menu"
+#~ msgstr ""

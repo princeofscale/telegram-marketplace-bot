@@ -1,0 +1,329 @@
+# English translations for messages..
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the messages. project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages. VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-15 12:58+0400\n"
+"PO-Revision-Date: 2024-01-14 14:51+0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: bot/handlers/export_users.py:29
+msgid "user counter: <b>{count}</b>"
+msgstr "user counter: <b>{count}</b>"
+
+#: bot/handlers/info.py:11
+msgid "about"
+msgstr ""
+"ℹ️ <b>Info</b>\n"
+"\n"
+"Avoxo is a bot for buying digital goods: virtual currency, accounts, Telegram Stars, and other items. The catalog may change, so the current offers are always shown in the catalog."
+
+#: bot/handlers/menu.py:13 bot/handlers/start.py:16
+msgid "title main keyboard"
+msgstr ""
+"✨ <b>Avoxo</b>\n"
+"\n"
+"Choose a section: catalog, profile, purchases, or support."
+
+#: bot/handlers/support.py:13
+msgid "support text"
+msgstr "🤝 Support"
+
+#: bot/keyboards/inline/contacts.py:11 bot/keyboards/inline/contacts.py:22
+#: bot/keyboards/inline/menu.py:12
+msgid "support button"
+msgstr "Support"
+
+msgid "captcha prompt"
+msgstr "Please confirm that you are human to continue."
+
+msgid "captcha pass button"
+msgstr "✅ I am human"
+
+msgid "registration required"
+msgstr "Please start registration with /start."
+
+msgid "new referral notification"
+msgstr "A new referral joined: {first_name} ({user_id})."
+
+#: bot/keyboards/inline/contacts.py:23
+msgid "back button"
+msgstr "🔙 Back"
+
+#: bot/keyboards/inline/menu.py:9
+msgid "wallet button"
+msgstr "Profile"
+
+#: bot/keyboards/inline/menu.py:10
+msgid "premium button"
+msgstr "🆙 Get PREMIUM"
+
+msgid "catalog button"
+msgstr "Catalog"
+
+msgid "purchases button"
+msgstr "My purchases"
+
+msgid "settings button"
+msgstr "Settings"
+
+msgid "admin panel button"
+msgstr "Admin panel"
+
+#: bot/keyboards/inline/menu.py:11
+msgid "info button"
+msgstr "Info"
+
+#: bot/middlewares/auth.py:41
+msgid "first message"
+msgstr ""
+"👋 <b>Welcome to the bot.</b>\n"
+"\n"
+"Use /start to open the menu."
+
+msgid "catalog title"
+msgstr "Available products"
+
+msgid "catalog empty"
+msgstr "No products are available right now."
+
+msgid "catalog unavailable"
+msgstr "Catalog is unavailable."
+
+msgid "product unavailable"
+msgstr "This product is unavailable."
+
+msgid "product details"
+msgstr ""
+"<b>{title}</b>\n"
+"Category: {category}\n"
+"Price: {price}"
+
+msgid "buy button"
+msgstr "Buy"
+
+msgid "confirm purchase button"
+msgstr "✅ Confirm purchase"
+
+msgid "purchase confirmation"
+msgstr ""
+"🧾 <b>Purchase confirmation</b>\n"
+"\n"
+"Item: <b>{title}</b>\n"
+"Category: {category}\n"
+"Amount to charge: <b>{price}</b>\n"
+"\n"
+"After confirmation, the amount will be charged from your balance and the item will be delivered automatically."
+
+msgid "insufficient funds"
+msgstr "Insufficient funds."
+
+msgid "purchase completed"
+msgstr ""
+"Purchase completed.\n"
+"Order: {order_id}\n"
+"Price: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "purchases title"
+msgstr "Your purchases"
+
+msgid "purchases empty"
+msgstr "You do not have purchases yet."
+
+msgid "purchase unavailable"
+msgstr "Purchase is unavailable."
+
+msgid "purchase details"
+msgstr ""
+"Order: {order_id}\n"
+"Status: {status}\n"
+"Price: {price}\n"
+"\n"
+"{delivery}"
+
+msgid "wallet title"
+msgstr ""
+"<b>Profile</b>\n"
+"ID: <code>{user_id}</code>\n"
+"Name: {first_name}\n"
+"Username: {username}\n"
+"Language: {language_code}\n"
+"Role: {role}\n"
+"\n"
+"Balance: {balance}\n"
+"Deposited: {total_deposited}\n"
+"Spent: {total_spent}"
+
+msgid "wallet unavailable"
+msgstr "Profile is unavailable."
+
+msgid "empty value"
+msgstr "not set"
+
+msgid "top up button"
+msgstr "Top up"
+
+msgid "deposit history button"
+msgstr "Top-ups"
+
+msgid "top up title"
+msgstr "Choose a top-up amount:"
+
+msgid "deposit amount button"
+msgstr "{amount} RUB"
+
+msgid "deposit unavailable"
+msgstr "Deposit is unavailable."
+
+msgid "deposit created"
+msgstr ""
+"Deposit created.\n"
+"Amount: {amount}\n"
+"Method: {payment_method}\n"
+"Payment reference: {provider_payment_id}"
+
+msgid "choose payment method"
+msgstr "Choose payment method for balance top-up: {amount}"
+
+msgid "manual payment method button"
+msgstr "Manual check"
+
+msgid "pay button"
+msgstr "Pay"
+
+msgid "check payment button"
+msgstr "Check payment"
+
+msgid "deposit check unavailable"
+msgstr "Payment check is unavailable."
+
+msgid "deposit status"
+msgstr "Payment status: {status}"
+
+msgid "deposit history title"
+msgstr "Your top-ups:"
+
+msgid "deposit history empty"
+msgstr "Your top-ups:\n\nNo top-ups yet."
+
+msgid "deposit history item button"
+msgstr "{amount} RUB — {status}"
+
+msgid "deposit details"
+msgstr ""
+"<b>Top-up</b>\n"
+"Balance amount: {amount}\n"
+"Payment amount: {requested_amount}\n"
+"Commission: {commission_amount}\n"
+"Method: {payment_method}\n"
+"Status: {status}\n"
+"Payment ID: <code>{provider_payment_id}</code>\n"
+"Created: {created_at}"
+
+msgid "deposit status paid"
+msgstr "successful"
+
+msgid "deposit status failed"
+msgstr "failed"
+
+msgid "deposit status pending"
+msgstr "in progress"
+
+msgid "previous page button"
+msgstr "Previous"
+
+msgid "next page button"
+msgstr "Next"
+
+msgid "settings title"
+msgstr ""
+"<b>Settings</b>\n"
+"Current language: {language_code}\n"
+"\n"
+"Choose what you want to configure:"
+
+msgid "language settings title"
+msgstr ""
+"<b>Language settings</b>\n"
+"Current language: {language_code}\n"
+"\n"
+"Choose language:"
+
+msgid "language settings button"
+msgstr "Language"
+
+msgid "settings unavailable"
+msgstr "Settings are unavailable."
+
+msgid "language changed"
+msgstr "Language changed: {language_code}"
+
+msgid "language ru button"
+msgstr "Русский"
+
+msgid "language en button"
+msgstr "English"
+
+msgid "language uk button"
+msgstr "Українська"
+
+msgid "selected language button"
+msgstr "✓ {language}"
+
+msgid "privacy policy button"
+msgstr "Privacy policy"
+
+msgid "main menu button"
+msgstr "Main menu"
+
+msgid "privacy policy"
+msgstr ""
+"<b>Privacy policy</b>\n"
+"\n"
+"We use Telegram profile data, such as ID, display name, language, and username, to create a profile, process orders, top-ups, and support requests.\n"
+"\n"
+"Payment data is processed by payment providers. The bot stores only technical order and payment information required for the service to work.\n"
+"\n"
+"We do not sell personal data to third parties. Data may be shared only with services required for bot operation, payments, analytics, security, and support.\n"
+"\n"
+"For data-related questions, contact support."
+
+msgid "admin panel title"
+msgstr "<b>Admin panel</b>"
+
+msgid "admin access denied"
+msgstr "You do not have access to the admin panel."
+
+msgid "admin stats button"
+msgstr "Stats"
+
+msgid "admin export users button"
+msgstr "Export users"
+
+msgid "admin export started"
+msgstr "User export is ready."
+
+msgid "admin stats text"
+msgstr ""
+"<b>Stats</b>\n"
+"Users: {users_count}\n"
+"Admins: {admins_count}\n"
+"Top-ups: {deposits_count}\n"
+"Successful top-ups: {paid_deposits_count}\n"
+"Successful top-up amount: {paid_deposits_amount}\n"
+"Orders: {orders_count}\n"
+"Catalog products: {catalog_products_count}\n"
+"Inventory items: {inventory_items_count}"
