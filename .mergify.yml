@@ -10,8 +10,5 @@ pull_request_rules:
       merge:
         method: squash
 
-  - name: Delete merged PR branches
-    conditions:
-      - merged
-    actions:
-      delete_head_branch: {}
+merge_protections_settings:
+  reporting_method: check-runs
