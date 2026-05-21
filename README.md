@@ -1,5 +1,7 @@
 # Telegram Marketplace Bot
 
+[![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/princeofscale/telegram-marketplace-bot?utm_source=oss&utm_medium=github&utm_campaign=princeofscale%2Ftelegram-marketplace-bot&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)](https://coderabbit.ai)
+
 Telegram bot for selling digital goods with a balance wallet, order delivery, admin tools, provider inventory sync, and Docker-based deployment.
 
 ## Features
