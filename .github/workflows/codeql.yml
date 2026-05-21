@@ -7,14 +7,20 @@ on:
     branches: ["main", "master"]
   schedule:
     - cron: "20 13 * * 0"
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       actions: read
       contents: read
@@ -34,6 +40,7 @@ jobs:
         uses: github/codeql-action/init@9e0d7b8d25671d64c341c19c0152d693099fb5ba # v4
         with:
           languages: ${{ matrix.language }}
+          queries: +security-extended,security-and-quality
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@9e0d7b8d25671d64c341c19c0152d693099fb5ba # v4

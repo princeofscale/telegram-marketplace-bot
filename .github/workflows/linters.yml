@@ -5,14 +5,20 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: linting-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
     name: Lint and test
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -24,6 +30,8 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        with:
+          enable-cache: true
 
       - name: Install dependencies
         run: uv sync --frozen --all-groups --dev

@@ -9,7 +9,11 @@ repos:
       - id: check-json
       - id: check-added-large-files
         args: [--maxkb=3000]
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
       - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: destroyed-symlinks
       - id: fix-byte-order-marker
       - id: mixed-line-ending
       - id: debug-statements
@@ -22,3 +26,13 @@ repos:
       - id: ruff-check
         args: [--fix]
       - id: ruff-format
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.9.0
+    hooks:
+      - id: gitleaks
